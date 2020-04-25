@@ -7,6 +7,8 @@ import MarketPage from "./pages/MarketPage";
 import Navbar from "./components/Navbar";
 import "./App.css";
 
+export const UserContext = React.createContext();
+
 class App extends React.Component {
   state = { user: null };
 
@@ -38,21 +40,23 @@ class App extends React.Component {
     const { user } = this.state;
     if (this.props.authState === "signedIn" && user) {
       return (
-        <Router>
-          <>
-            <Navbar user={user} handleSignout={this.handleSignout} />
-            <div className="app-container">
-              <Route exact path="/" component={HomePage} />
-              <Route path="/profile" component={ProfilePage} />
-              <Route
-                path="/markets/:marketId"
-                component={({ match }) => (
-                  <MarketPage marketId={match.params.marketId} />
-                )}
-              />
-            </div>
-          </>
-        </Router>
+        <UserContext.Provider value={{ user }}>
+          <Router>
+            <>
+              <Navbar user={user} handleSignout={this.handleSignout} />
+              <div className="app-container">
+                <Route exact path="/" component={HomePage} />
+                <Route path="/profile" component={ProfilePage} />
+                <Route
+                  path="/markets/:marketId"
+                  component={({ match }) => (
+                    <MarketPage marketId={match.params.marketId} />
+                  )}
+                />
+              </div>
+            </>
+          </Router>
+        </UserContext.Provider>
       );
     } else {
       return null;

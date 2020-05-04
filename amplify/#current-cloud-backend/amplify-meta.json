@@ -21,7 +21,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyagora-prod-94009-deployment/amplify-cfn-templates/auth/amplifyagorac04500ef-cloudformation-template.yml",
 				"logicalId": "authamplifyagorac04500ef"
 			},
-			"lastPushTimeStamp": "2020-04-14T22:41:32.925Z",
+			"lastPushTimeStamp": "2020-05-04T22:07:40.782Z",
 			"output": {
 				"AppClientSecret": "ud4048cd4dcauetf2ihj20dse23sscqq4j5gegkctortkqq1fgg",
 				"UserPoolId": "ap-southeast-2_vtdbv7m5K",
@@ -55,8 +55,24 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyagora-prod-94009-deployment/amplify-cfn-templates/api/cloudformation-template.json",
 				"logicalId": "apiamplifyagora"
 			},
-			"lastPushTimeStamp": "2020-04-14T22:41:32.925Z",
+			"lastPushTimeStamp": "2020-05-04T22:07:40.784Z",
 			"lastPushDirHash": "LrJBoIurIG6D3jvj2eUjzndyn4g="
+		}
+	},
+	"storage": {
+		"s368ce9afc": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyagora-prod-94009-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storages368ce9afc"
+			},
+			"lastPushTimeStamp": "2020-05-04T22:07:40.790Z",
+			"output": {
+				"BucketName": "amplifyagora09b43edd3e624bd5a02e6b178547abf794009-prod",
+				"Region": "ap-southeast-2"
+			},
+			"lastPushDirHash": "AyOs/NRv+MhJdgUk0GchMnQTdo0="
 		}
 	}
 }

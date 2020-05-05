@@ -34,6 +34,7 @@ class MarketPage extends React.Component {
 
   render() {
     const { market, isLoading, isMarketOwner } = this.state;
+    console.log("marketId", this.props.marketId);
     return isLoading ? (
       <Loading fullscreen={true} />
     ) : (
@@ -64,7 +65,7 @@ class MarketPage extends React.Component {
               }
               name="1"
             >
-              <NewProduct />
+              <NewProduct marketId={this.props.marketId} />
             </Tabs.Pane>
           )}
 
